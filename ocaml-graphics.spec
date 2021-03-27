@@ -70,8 +70,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/ocaml/%{module}/dune-package
 %{_libdir}/ocaml/%{module}/opam
-%if %{with ocaml_opt}
 %{_libdir}/ocaml/%{module}/*.a
+%if %{with ocaml_opt}
 %{_libdir}/ocaml/%{module}/*.cmx
 %{_libdir}/ocaml/%{module}/*.cmxa
 %endif
