@@ -13,10 +13,11 @@
 
 %define		module	graphics
 Summary:	Portable drawing primitives for OCaml
+Summary(pl.UTF-8):	Przenośne funkcje rysujące dla OCamla
 Name:		ocaml-%{module}
 Version:	5.1.1
 Release:	1
-License:	LGPLv2 with exceptions
+License:	LGPL v2 with exceptions
 Source0:	https://github.com/ocaml/graphics/releases/download/%{version}/%{module}-%{version}.tbz
 # Source0-md5:	bc127b5da919b61f4c928a6657c88886
 URL:		https://github.com/ocaml/graphics
@@ -31,14 +32,24 @@ The graphics library provides a set of portable drawing primitives.
 Drawing takes place in a separate window that is created when
 Graphics.open_graph is called.
 
-%package        devel
-Summary:	Development files for %{name}
+%description -l pl.UTF-8
+Biblioteka graphics dostarcza zbiór przenośnych funkcji rysujących.
+Rysowanie jest wykonywane w osobnym oknie, tworzonym przy wywołaniu
+Graphics.open_graph.
+
+%package devel
+Summary:	Development files for graphics library
+Summary(pl.UTF-8):	Pliki programistyczne biblioteki graphics
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
 
-%description    devel
-The %{name}-devel package contains libraries and signature files for
-developing applications that use %{name}.
+%description devel
+This package contains libraries and signature files for developing
+applications that use OCaml graphics library.
+
+%description devel -l pl.UTF-8
+Ten pakiet zawiera biblioteki i pliki sygnatur do tworzenia aplikacji
+wykorzystujących bibliotekę OCamla graphics.
 
 %prep
 %setup -q -n %{module}-%{version}
