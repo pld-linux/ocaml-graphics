@@ -18,6 +18,7 @@ Name:		ocaml-%{module}
 Version:	5.1.1
 Release:	1
 License:	LGPL v2 with exceptions
+Group:		Libraries
 Source0:	https://github.com/ocaml/graphics/releases/download/%{version}/%{module}-%{version}.tbz
 # Source0-md5:	bc127b5da919b61f4c928a6657c88886
 URL:		https://github.com/ocaml/graphics
@@ -40,6 +41,7 @@ Graphics.open_graph.
 %package devel
 Summary:	Development files for graphics library
 Summary(pl.UTF-8):	Pliki programistyczne biblioteki graphics
+Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
 
