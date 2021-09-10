@@ -26,6 +26,7 @@ BuildRequires:	ocaml >= 4.09.0
 BuildRequires:	ocaml-dune-devel >= 2.1
 BuildRequires:	xorg-lib-libX11-devel
 %requires_eq	ocaml-runtime
+Obsoletes:	ocaml-x11graphics < 1:4.09
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,6 +45,7 @@ Summary(pl.UTF-8):	Pliki programistyczne biblioteki graphics
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
+Obsoletes:	ocaml-x11graphics-devel < 1:4.09
 
 %description devel
 This package contains libraries and signature files for developing
