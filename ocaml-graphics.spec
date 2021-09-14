@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	ocaml_opt	# skip building native optimized binaries (bytecode is always built)
+%bcond_without	ocaml_opt	# native optimized binaries (bytecode is always built)
 
 # not yet available on x32 (ocaml 4.02.1), update when upstream will support it
 %ifnarch %{ix86} %{x8664} %{arm} aarch64 ppc sparc sparcv9
@@ -15,12 +15,13 @@
 Summary:	Portable drawing primitives for OCaml
 Summary(pl.UTF-8):	Przenośne funkcje rysujące dla OCamla
 Name:		ocaml-%{module}
-Version:	5.1.1
+Version:	5.1.2
 Release:	1
 License:	LGPL v2 with exceptions
 Group:		Libraries
+#Source0Download: https://github.com/ocaml/graphics/releases/download
 Source0:	https://github.com/ocaml/graphics/releases/download/%{version}/%{module}-%{version}.tbz
-# Source0-md5:	bc127b5da919b61f4c928a6657c88886
+# Source0-md5:	0b24d47c2157da8529c2e55265b079c3
 URL:		https://github.com/ocaml/graphics
 BuildRequires:	ocaml >= 4.09.0
 BuildRequires:	ocaml-dune-devel >= 2.1
@@ -79,7 +80,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with ocaml_opt}
 %attr(755,root,root) %{_libdir}/ocaml/%{module}/*.cmxs
 %endif
-%{_libdir}/ocaml/stublibs/dllgraphics_stubs.so
+%attr(755,root,root) %{_libdir}/ocaml/stublibs/dllgraphics_stubs.so
 
 %files devel
 %defattr(644,root,root,755)
