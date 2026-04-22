@@ -16,7 +16,7 @@ Summary:	Portable drawing primitives for OCaml
 Summary(pl.UTF-8):	Przenośne funkcje rysujące dla OCamla
 Name:		ocaml-%{module}
 Version:	5.1.2
-Release:	1
+Release:	2
 License:	LGPL v2 with exceptions
 Group:		Libraries
 #Source0Download: https://github.com/ocaml/graphics/releases/download
